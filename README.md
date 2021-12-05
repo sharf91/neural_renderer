@@ -8,7 +8,7 @@ The library is fully functional and it passes all the test cases supplied by the
 Detailed documentation will be added in the near future.
 
 ## Fork Notes:
-Compiles with Python 3.7 and Pytorch 1.10.
+Compiles with Python 3.7, 3.9 and Pytorch 1.10 On both Linux and Windows.
 
 ## Requirements
 ~~Python 2.7+ and PyTorch 0.4.0.~~
@@ -18,11 +18,31 @@ Currently the library has both Python 3 and Python 2 support.
 
 **Note**: In some newer PyTorch versions you might see some compilation errors involving AT_ASSERT. In these cases you can use the version of the code that is in the branch *at_assert_fix*. These changes will be merged into master in the near future.
 ## Installation
-~~You can install the package by running~~
+
+### __Linux__
+The installation is done using conda.
+Make sure to install the same version of cudatoolkit-dev as used for pytorch.
 ```
-pip install neural_renderer_pytorch    # This no longer works
+conda create -n render python=3.9
+conda install pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch
+conda install -c conda-forge cudatoolkit-dev=11.3
 ```
-Since running install.py requires PyTorch, make sure to install PyTorch before running the above command.
+Then finally install using 
+```
+python setup.py install
+```
+### __Windows__
+```
+conda create -n render python=3.9
+conda install pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch
+```
+You also need to manually install cuda. Make sure down download the same version as used for pytorch.
+
+Then finally install using 
+```
+python setup.py install
+```
+
 ## Running examples
 ```
 python ./examples/example1.py
