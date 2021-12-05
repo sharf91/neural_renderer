@@ -8,15 +8,15 @@ The library is fully functional and it passes all the test cases supplied by the
 Detailed documentation will be added in the near future.
 
 ## Fork Notes:
-Compiles with Python 3.7, 3.9 and Pytorch 1.10 On both Linux and Windows.
+Compiles with Python 3.7, 3.9 and Pytorch 1.10 on both Linux and Windows.
 
 ## Requirements
-~~Python 2.7+ and PyTorch 0.4.0.~~
-
-The code has been tested only with PyTorch 0.4.0, there are no guarantees that it is compatible with older versions.
-Currently the library has both Python 3 and Python 2 support.
-
-**Note**: In some newer PyTorch versions you might see some compilation errors involving AT_ASSERT. In these cases you can use the version of the code that is in the branch *at_assert_fix*. These changes will be merged into master in the near future.
+To run the examples you will need the following packages:
+```
+tqdm
+imageio
+scikit-image
+```
 ## Installation
 
 ### __Linux__
